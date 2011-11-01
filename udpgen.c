@@ -23,14 +23,14 @@
  AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+ Description:
+
+ A simple  UDP TRAFFIC GENERATOR
+ Evaluate % of successful packets compared to transmitted packets
+
  Compilation:
 
  gcc ipgen.c -o ipgen -O3
-
- Description:
-
- A simple  RAW IP TRAFFIC GENERATOR (require sudo)
- Evaluate % of successful packets compared to transmitted packets
 
  There are two types of unsuccessful packages
  1. Loss or drop by lower layers.

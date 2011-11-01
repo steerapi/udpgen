@@ -1,0 +1,25 @@
+ Description:
+
+ A simple  UDP TRAFFIC GENERATOR
+ Evaluate % of successful packets compared to transmitted packets
+
+ Compilation:
+
+ gcc ipgen.c -o ipgen -O3
+
+ There are two types of unsuccessful packages
+ 1. Loss or drop by lower layers.
+ 2. Fail the checksum.
+ This program counts both losses.
+
+ Packet structure:
+ 4 bytes for seq | n bytes for Data | 2 bytes for checksum
+
+ Usage: ./udpgen [-v] -[s|c] [-n NUM_PACKET] [-l PACKET_LENGTH_IN_BYTES] [-b BANDWIDTH_IN_BYTES_PER_SEC] IPADDRESS PORT
+ -v means verbose
+ -s means server
+ -c means client
+ 
+ e.g.
+ ./udpgen -vcl 1000 -b 10000 127.0.0.1 5556
+ ./udogen -vsl 1000 127.0.0.1 5556
